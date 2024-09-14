@@ -1,0 +1,52 @@
+@import "../../../../../mixins";
+
+.weather__detail{
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+
+  width: 90%;
+  @include phone{
+    width: 80%;
+  }
+  h1{
+    font-size: 20px;
+    margin-top: 32px;
+    @include phone{
+      text-align: center;
+      margin-top: 16px;
+      font-size: 16px;
+    }
+  }
+
+  &__item{
+    display: flex;
+    justify-content: space-between;
+      width: 100%;
+    margin: 32px 0 ;
+    @include phone{
+      margin:16px 0 ;
+    }
+    p{
+      color: rgba(255,255,255,0.7);
+      font-size: 20px;
+      @include phone{
+        font-size: 16px;
+      }
+    }
+
+    &__data{
+      display: flex;
+
+      p{
+        color: #ffffff;
+      }
+      img{
+        margin-left: 16px;
+
+      }
+    }
+  }
+}

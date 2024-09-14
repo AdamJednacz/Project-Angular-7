@@ -1,0 +1,56 @@
+@import '../../../mixins';
+
+.content{
+  display: flex;
+justify-content: space-between;
+  height: 100%;
+@include phone{
+  justify-content: inherit;
+  flex-direction: column;
+  align-items: center;
+
+}
+}
+app-weather-table {
+  max-width: 30%;
+  width: 100%;
+  backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: rgba(255,255,255,0.2) solid 3px;
+  padding: 32px 16px 0 16px  ;
+  @include phone{
+    max-width: 100%;
+    border-left: none;
+    border-top: rgba(255,255,255,0.2) solid 3px;
+    padding: 16px 16px 0 16px  ;
+  }
+}
+app-short-detail{
+ position: relative;
+  top:30%;
+  left:5%;
+  @include phone{
+  position: static;
+    top: 5%;
+    left: 0;
+    height: 100%;
+    width: 90%;
+  }
+}
+.mobile_search_bar {
+  display: none;
+  @include phone{
+    display: flex;
+   justify-content: flex-end;
+    width: 100%;
+    padding: 16px;
+  }
+  app-search-bar {
+    @include phone {
+
+      width: 50%;
+    }
+  }
+}

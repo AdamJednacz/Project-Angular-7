@@ -1,0 +1,43 @@
+@import "../../../../mixins";
+
+.short_detail{
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  height: 100%;
+
+  @include phone{
+  justify-content: center;
+  }
+  &_temp{
+    font-size: 140px;
+    @include phone{
+     font-size: 60px;
+    }
+  }
+  &_place{
+    margin-left: 1rem;
+    &_city{
+      font-size: 60px;
+      margin-bottom: 16px;
+      @include phone{
+        font-size: 30px;
+      }
+    }
+    &_date{
+      font-size: 18px;
+      @include phone{
+        font-size: 12px;
+      }
+    }
+  }
+  &_cloud{
+    margin-left: 32px;
+    @include phone{
+      margin-left: 16px;
+    }
+  }
+}
