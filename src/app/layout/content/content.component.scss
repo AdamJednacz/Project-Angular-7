@@ -32,6 +32,9 @@ app-short-detail{
   top:30%;
   left:5%;
   @include phone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   position: static;
     top: 5%;
     left: 0;

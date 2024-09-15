@@ -1,38 +1,90 @@
-<div class="weather__detail">
+<div *ngIf="weatherData$ | async as weatherData; else placeholder" class="weather__detail">
   <h1>Weather Data</h1>
+
   <div class="weather__detail__item">
     <p>Temp max</p>
     <div class="weather__detail__item__data">
-      <p>19&#186;</p>
-      <img src="assets/temp_max.png"  alt=""/>
+      <p>{{ weatherData.main.temp_max | number: '1.0-0'}}&#186;</p>
+      <img src="assets/temp_max.png" alt="Temp Max Icon" />
     </div>
   </div>
+
   <div class="weather__detail__item">
     <p>Temp min</p>
     <div class="weather__detail__item__data">
-      <p>15&#186;</p>
-      <img src="assets/temp_min.png" alt="" />
+      <p>{{ weatherData.main.temp_min | number: '1.0-0'}}&#186;</p>
+      <img src="assets/temp_min.png" alt="Temp Min Icon" />
     </div>
   </div>
+
   <div class="weather__detail__item">
-    <p>Humadity</p>
+    <p>Humidity</p>
     <div class="weather__detail__item__data">
-      <p>58%</p>
-      <img src="assets/humadity.png"  alt=""/>
+      <p>{{ weatherData.main.humidity }}%</p>
+      <img src="assets/humadity.png" alt="Humidity Icon" />
     </div>
   </div>
+
   <div class="weather__detail__item">
-    <p>Cloudy</p>
+    <p>Pressure</p>
     <div class="weather__detail__item__data">
-      <p>86%</p>
-      <img src="assets/cloudy_2.png"  alt=""/>
+      <p>{{ weatherData.main.pressure }}Pa</p>
+      <img src="assets/cloudy_2.png" alt="Cloudy Icon" />
     </div>
   </div>
+
   <div class="weather__detail__item">
     <p>Wind</p>
     <div class="weather__detail__item__data">
-      <p>5km/h</p>
-      <img src="assets/wind.png" alt="" />
+      <p>{{ weatherData.wind.speed }} km/h</p>
+      <img src="assets/wind.png" alt="Wind Icon" />
     </div>
   </div>
 </div>
+
+<!-- Placeholder content when weather data is not available -->
+<ng-template #placeholder>
+  <div class="weather__detail">
+    <h1>Weather Data</h1>
+
+    <div class="weather__detail__item">
+      <p>Temp max</p>
+      <div class="weather__detail__item__data">
+        <p>0&#186;</p>
+        <img src="assets/temp_max.png" alt="Temp Max Icon" />
+      </div>
+    </div>
+
+    <div class="weather__detail__item">
+      <p>Temp min</p>
+      <div class="weather__detail__item__data">
+        <p>0&#186;</p>
+        <img src="assets/temp_min.png" alt="Temp Min Icon" />
+      </div>
+    </div>
+
+    <div class="weather__detail__item">
+      <p>Humidity</p>
+      <div class="weather__detail__item__data">
+        <p>0%</p>
+        <img src="assets/humadity.png" alt="Humidity Icon" />
+      </div>
+    </div>
+
+    <div class="weather__detail__item">
+      <p>Pressure</p>
+      <div class="weather__detail__item__data">
+        <p>0 Pa</p>
+        <img src="assets/cloudy_2.png" alt="Cloudy Icon" />
+      </div>
+    </div>
+
+    <div class="weather__detail__item">
+      <p>Wind</p>
+      <div class="weather__detail__item__data">
+        <p>0 km/h</p>
+        <img src="assets/wind.png" alt="Wind Icon" />
+      </div>
+    </div>
+  </div>
+</ng-template>

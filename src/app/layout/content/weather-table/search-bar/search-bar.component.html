@@ -1,5 +1,6 @@
 
-<form>
-  <input type="text" placeholder="Search Location..."/>
+<form [formGroup]="form">
+  <input formControlName="city" type="text" placeholder="Search Location..."/>
   <img src="assets/search.svg" alt=""/>
 </form>
+
