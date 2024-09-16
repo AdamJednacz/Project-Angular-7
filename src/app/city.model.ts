@@ -8,6 +8,13 @@ export interface City {
     }
     wind:{
       speed:string;
-    }
+    },
+    clouds:number;
     name:string;
+    sys:{
+      sunrise:number;
+      sunset:number;
+    },
+  timezone:number;
+    dt:number;
 }

@@ -6,6 +6,7 @@
   font-weight: 400;
   font-style: normal;
   width: 90%;
+  padding: 16px 0;
 
   h1{
     font-size: 20px;
@@ -42,14 +43,18 @@
       }
       img{
         margin-bottom: 8px;
+        width: 22px;
       }
       p{
         font-size: 20px;
+        margin-bottom: 8px;
         @include phone{
           font-size: 16px;
         }
         &:last-of-type{
-          margin-top: 8px;
+          font-size: 12px;
+          font-weight: 300;
+          color: rgba(255,255,255,0.7);
         }
       }
     }

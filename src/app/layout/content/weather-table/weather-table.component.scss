@@ -29,3 +29,9 @@ app-temp-scroll{
   justify-content: center;
 }
 
+app-sunrise-sunset{
+  width: 100%;
+  @include phone{
+    display: none;
+  }
+}

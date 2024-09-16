@@ -3,7 +3,7 @@
   <div class="short_detail_place">
     <p class="short_detail_place_city">{{weatherData.name}}</p>
     <!-- Display the current time dynamically -->
-    <p class="short_detail_place_date">{{ currentTime$ | async }}</p>
+    <p class="short_detail_place_date">{{ weatherData.dt | unixToFullDate }}</p>
   </div>
   <img class="short_detail_cloud" [src]="imageSrc" alt="1">
 </div>
@@ -14,7 +14,7 @@
     <p class="short_detail_temp">0&#186;</p>
     <div class="short_detail_place">
       <p class="short_detail_place_city">Unknown City</p>
-      <p class="short_detail_place_date">{{ currentTime$ | async }}</p>
+      <p class="short_detail_place_date">00:00</p>
     </div>
     <img class="short_detail_cloud" [src]="imageSrc" alt="Placeholder">
   </div>

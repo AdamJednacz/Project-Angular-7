@@ -1,0 +1,23 @@
+<div *ngIf="weatherData$ | async as weatherData; else placeholder"  class="sunrise__sunset">
+    <div class="sunrise__sunset__item">
+      <img src="assets/cloud_sunny.png" alt=""/>
+      <p>Sunrise {{weatherData.sys.sunrise | unixToHour}}</p>
+    </div>
+  <div class="sunrise__sunset__item">
+    <img src="assets/cloud_moon.png" alt=""/>
+    <p>Sunset {{weatherData.sys.sunset | unixToHour}}</p>
+  </div>
+</div>
+
+<ng-template #placeholder>
+<div class="sunrise__sunset">
+  <div class="sunrise__sunset__item">
+    <img src="assets/cloud_sunny.png" alt=""/>
+    <p>Sunrise 00:00</p>
+  </div>
+  <div class="sunrise__sunset__item">
+    <img src="assets/cloud_moon.png" alt=""/>
+    <p>Sunset 0:00</p>
+  </div>
+</div>
+</ng-template>

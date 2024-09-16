@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {ShortDetailComponent} from "./short-detail/short-detail.component";
 import {WeatherTableComponent} from "./weather-table/weather-table.component";
 import {SearchBarComponent} from "./weather-table/search-bar/search-bar.component";
+import {SunriseSunsetComponent} from "./weather-table/sunrise-sunset/sunrise-sunset.component";
 
 @Component({
   selector: 'app-content',
@@ -9,7 +10,9 @@ import {SearchBarComponent} from "./weather-table/search-bar/search-bar.componen
   imports: [
     ShortDetailComponent,
     WeatherTableComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    SunriseSunsetComponent,
+
   ],
   templateUrl: './content.component.html',
   styleUrl: './content.component.scss'

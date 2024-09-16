@@ -1,7 +1,7 @@
 @import "../../../../../mixins";
 
 form{
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
   display: flex;
 
   color: #ffffff;
@@ -26,6 +26,7 @@ form{
     }
     @include phone{
       font-size: 16px;
+      text-align: center;
     }
   }
   input::placeholder{
