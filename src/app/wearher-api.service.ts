@@ -42,6 +42,7 @@ export class WeatherApiService {
               sunrise: response.sys.sunrise,
               sunset: response.sys.sunset,
             },
+
             timezone:response.timezone,
             dt:response.dt,
             weather:{

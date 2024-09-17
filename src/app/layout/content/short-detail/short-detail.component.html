@@ -6,6 +6,7 @@
     <p class="short_detail_place_date">{{ weatherData.dt | unixToFullDate }}</p>
   </div>
   <img class="short_detail_cloud"  [src]="'assets/icons/' + weatherData.weather.icon + '_70.png'" alt="Weather icon"/>
+  <img class="short_detail_cloud_phone"  [src]="'assets/icons/' + weatherData.weather.icon+'.png'" alt="Weather icon"/>
 </div>
 
 <!-- Placeholder content -->
@@ -17,5 +18,6 @@
       <p class="short_detail_place_date">00:00</p>
     </div>
     <img class="short_detail_cloud" [src]="imageSrc" alt="Placeholder">
+    <img class="short_detail_cloud_phone"  [src]="'assets/icons/01d.png'" alt="Weather icon"/>
   </div>
 </ng-template>
