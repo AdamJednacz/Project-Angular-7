@@ -9,9 +9,12 @@ export interface City3dayWeatherModel {
         humidity:string,
         pressure:string,
 
-      }
+      },
       wind:{
         speed:string
+      },
+      weather:{
+        icon:string
       }
     }
   ]

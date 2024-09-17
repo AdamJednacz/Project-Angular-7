@@ -5,7 +5,7 @@
     <!-- Display the current time dynamically -->
     <p class="short_detail_place_date">{{ weatherData.dt | unixToFullDate }}</p>
   </div>
-  <img class="short_detail_cloud" [src]="imageSrc" alt="1">
+  <img class="short_detail_cloud"  [src]="'assets/icons/' + weatherData.weather.icon + '_70.png'" alt="Weather icon"/>
 </div>
 
 <!-- Placeholder content -->

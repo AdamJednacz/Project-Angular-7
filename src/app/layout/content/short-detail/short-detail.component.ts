@@ -19,7 +19,7 @@ import {UnixToFullDatePipe} from "../../../unix_to_full_date.pipe";
   styleUrl: './short-detail.component.scss'
 })
 export class ShortDetailComponent implements OnInit{
-  imageSrc = '/assets/Cloudy.png'
+  imageSrc = '/assets/icons/01d_70.png'
   private weatherApi = inject(WeatherApiService);
   weatherData$!: Observable<City | null>; // Observable to hold weather data
   ngOnInit(): void {

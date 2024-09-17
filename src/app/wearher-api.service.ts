@@ -44,6 +44,9 @@ export class WeatherApiService {
             },
             timezone:response.timezone,
             dt:response.dt,
+            weather:{
+              icon:response.weather[0].icon,
+            }
           };
 
 

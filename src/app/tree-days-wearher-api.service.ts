@@ -33,6 +33,9 @@ export class TreeDaysWearherApiService {
               },
               wind: {
                 speed: item.wind.speed.toString()
+              },
+              weather:{
+                icon:item.weather[0].icon.toString()
               }
             }))
           };
